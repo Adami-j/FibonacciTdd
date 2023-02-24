@@ -2,8 +2,9 @@ import java.util.Iterator;
 
 class FiboIterator implements Iterator<Integer> {
 
-
+    int arrivee;
     public FiboIterator(int arrivee) {
+        this.arrivee = arrivee;
     }
 
     @Override
@@ -13,6 +14,12 @@ class FiboIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        return 0;
+        int resultat=0;
+        if(arrivee==0){
+            resultat=0;
+        }else if(arrivee==1){
+            resultat=1;
+        }
+        return resultat;
     }
 }
