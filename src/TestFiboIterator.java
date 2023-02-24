@@ -31,6 +31,26 @@ public class TestFiboIterator {
         assertTrue(fiboIterator.hasNext());
     }
 
+    @Test
+    public void testHasNext2() {
+        FiboIterator fiboIterator = new FiboIterator(2);
+        assertTrue(fiboIterator.hasNext());
+    }
+
+    @Test
+    public void testHasNext3() {
+        FiboIterator fiboIterator = new FiboIterator(3);
+        assertTrue(fiboIterator.hasNext());
+    }
+
+    @Test
+    public void testFibo2(){
+        FiboIterator fibo = new FiboIterator(2);
+        fibo.next();
+
+        assertEquals(2,fibo.next().intValue() );
+    }
+
 
 
 }
