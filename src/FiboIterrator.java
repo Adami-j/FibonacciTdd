@@ -3,6 +3,8 @@ import java.util.Iterator;
 class FiboIterator implements Iterator<Integer> {
 
 
+    public FiboIterator(int arrivee) {
+    }
 
     @Override
     public boolean hasNext() {
@@ -11,6 +13,6 @@ class FiboIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        return null;
+        return 0;
     }
 }
