@@ -2,14 +2,19 @@ import java.util.Iterator;
 
 class FiboIterator implements Iterator<Integer> {
 
+    int depart;
+    int actuel;
     int arrivee;
     public FiboIterator(int arrivee) {
         this.arrivee = arrivee;
+        this.depart = 0;
+        actuel = 0;
     }
 
     @Override
     public boolean hasNext() {
-        return false;
+
+        return depart < arrivee;
     }
 
     @Override
@@ -20,6 +25,7 @@ class FiboIterator implements Iterator<Integer> {
         }else if(arrivee==1){
             resultat=1;
         }
+        depart++;
         return resultat;
     }
 }
