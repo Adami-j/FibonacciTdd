@@ -1,7 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 public class TestFiboIterator {
 
@@ -24,6 +23,12 @@ public class TestFiboIterator {
         fibo.next();
 
         assertEquals(1,fibo.next().intValue() );
+    }
+
+    @Test
+    public void testHasNext1() {
+        FiboIterator fiboIterator = new FiboIterator(0);
+        assertTrue(fiboIterator.hasNext());
     }
 
 
