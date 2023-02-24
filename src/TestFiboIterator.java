@@ -12,4 +12,20 @@ public class TestFiboIterator {
         assertEquals(0, fibo.next().intValue());
     }
 
+    @Test
+    public void testHasNext() {
+        FiboIterator fiboIterator = new FiboIterator(0);
+        assertFalse(fiboIterator.hasNext());
+    }
+
+    @Test
+    public void testFibo1(){
+        FiboIterator fibo = new FiboIterator(1);
+        fibo.next();
+
+        assertEquals(1,fibo.next().intValue() );
+    }
+
+
+
 }
