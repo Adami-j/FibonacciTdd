@@ -27,7 +27,7 @@ public class TestFiboIterator {
 
     @Test
     public void testHasNext1() {
-        FiboIterator fiboIterator = new FiboIterator(0);
+        FiboIterator fiboIterator = new FiboIterator(1);
         assertTrue(fiboIterator.hasNext());
     }
 
