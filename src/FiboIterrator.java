@@ -2,6 +2,10 @@ import java.util.Iterator;
 
 class FiboIterator implements Iterator<Integer> {
 
+    private int range;
+    public FiboIterator(int range) {
+
+    }
 
     @Override
     public boolean hasNext() {
