@@ -8,10 +8,6 @@ class FiboIterator implements Iterator<Integer> {
     private int termeCourrant = 1;
     private int termeSuivant = 0;
 
-
-    //parametre init à 1 car aucun terme de la suite ne peut être inférieur à 1
-    private int previous = 1;
-
     public FiboIterator(int indexEntree) {
         this.indexEntree = indexEntree;
     }
