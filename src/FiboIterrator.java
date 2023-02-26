@@ -6,7 +6,7 @@ class FiboIterator implements Iterator<Integer> {
     private int indexEntree;
     private int indexCourrant = 0;
     private int termeCourrant = 1;
-    private int termeSuivant = 1;
+    private int termeSuivant = 0;
 
 
     //parametre init à 1 car aucun terme de la suite ne peut être inférieur à 1
@@ -23,16 +23,12 @@ class FiboIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        indexCourrant++;
-        int resultat = 0;
-        if(indexCourrant<=2){
-            resultat = 1;
-            resultat = termeCourrant;
-        }else {
+            indexCourrant++;
+             int resultat = 0;
             resultat = termeCourrant + termeSuivant;
             termeCourrant = termeSuivant;
             termeSuivant = resultat;
-        }
+
         return resultat;
     }
 }
