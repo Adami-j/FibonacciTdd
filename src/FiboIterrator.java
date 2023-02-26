@@ -25,28 +25,14 @@ class FiboIterator implements Iterator<Integer> {
     public Integer next() {
         indexCourrant++;
         int resultat = 0;
-        if(indexCourrant== 0){
+        if(indexCourrant<=2){
             resultat = 1;
-            System.out.println(resultat);
-        }else if(indexCourrant== 1){
-            termeCourrant = 1;
             resultat = termeCourrant;
-            System.out.println(resultat);
-        }else if(indexCourrant== 2){
-            resultat = termeCourrant;
-            System.out.println(resultat);
-
         }else {
-            System.out.println("indexCourrant = " + indexCourrant);
-            System.out.println(termeCourrant+" + "+termeSuivant);
             resultat = termeCourrant + termeSuivant;
             termeCourrant = termeSuivant;
             termeSuivant = resultat;
-
-            System.out.println(resultat);
-
         }
-
         return resultat;
     }
 }
